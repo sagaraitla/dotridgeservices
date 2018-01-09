@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/novelhealth-microservices
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  profiles:
+    active: DEV
+    
+
+---
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:novelhealthcare
+    username: SA
+    password: 
+  h2:
+    console:
+      enabled: true
+      path: /h2console
+  profiles: QA
